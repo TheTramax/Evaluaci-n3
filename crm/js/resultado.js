@@ -32,7 +32,9 @@ const requestOptions = {
 fetch("http://144.126.210.74:8080/api/resultado", requestOptions)
   .then((response) => {
     if(response.status == 200){
+      setTimeout(() => {
       location.href ="listar.html";
+      }, 2000);
       let alertDiv = document.createElement("div");
       alertDiv.className = "alert alert-success";
       alertDiv.role = "alert";
@@ -171,7 +173,9 @@ function actualizarResultado(){
   fetch("http://144.126.210.74:8080/api/resultado/"+ g_id_resultado, requestOptions)
     .then((response) => {
       if(response.status == 200){
+        setTimeout(() => {
         location.href ="listar.html";
+        }, 2000);
         let alertDiv = document.createElement("div");
         alertDiv.className = "alert alert-success";
         alertDiv.role = "alert";
@@ -208,9 +212,11 @@ function actualizarResultado(){
       .then((response) => {
         
         if(response.status == 200){
+          setTimeout(() => {
           location.href ="listar.html";
+          }, 2000);
           let alertDiv = document.createElement("div");
-          alertDiv.className = "alert alert-danger";
+          alertDiv.className = "alert alert-success";
           alertDiv.role = "alert";
           alertDiv.innerHTML = `
           Registro eliminado correctamente`;
