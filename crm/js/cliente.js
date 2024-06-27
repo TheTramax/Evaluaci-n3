@@ -29,7 +29,7 @@ var celular = parseInt(document.getElementById("txt_celular").value);
     mostrarAlertaDeDatos("Por favor, ingrese el email.", "alert-danger");
     return; 
   }
-  if (celular === "") {
+  if (celular === ""|| isNaN(parseInt(celular))) {
     mostrarAlertaDeDatos("Por favor, ingrese el celular", "alert-danger");
     return; 
   }
@@ -185,7 +185,7 @@ function actualizarCliente(){
   var nombres = document.getElementById("txt_nombres").value;
   var apellidos = document.getElementById("txt_apellidos").value;
   var email = document.getElementById("txt_email").value;
-  var celular = document.getElementById("txt_celular").value;
+  var celular = parseInt(document.getElementById("txt_celular").value);
   if (nombres === "") {
     mostrarAlertaDeDatos("Por favor, ingrese el nombre .", "alert-danger");
     return; 
@@ -198,7 +198,7 @@ function actualizarCliente(){
     mostrarAlertaDeDatos("Por favor, ingrese el email.", "alert-danger");
     return; 
   }
-  if (celular === "") {
+  if (celular === ""|| isNaN(parseInt(celular))) {
     mostrarAlertaDeDatos("Por favor, ingrese el celular.", "alert-danger");
     return; 
   }
