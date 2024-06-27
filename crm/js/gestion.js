@@ -55,7 +55,9 @@ const requestOptions = {
 fetch("http://144.126.210.74:8080/api/gestion", requestOptions)
   .then((response) => {
     if(response.status == 200){
+      setTimeout(() => {
       location.href ="listar.html";
+      }, 2000);
       let alertDiv = document.createElement("div");
       alertDiv.className = "alert alert-success";
       alertDiv.role = "alert";
@@ -235,7 +237,9 @@ function actualizarGestion(){
   fetch("http://144.126.210.74:8080/api/gestion/"+ g_id_gestion, requestOptions)
     .then((response) => {
       if(response.status == 200){
+        setTimeout(() => {
         location.href ="listar.html";
+        }, 2000);
         let alertDiv = document.createElement("div");
         alertDiv.className = "alert alert-success";
         alertDiv.role = "alert";
@@ -271,7 +275,9 @@ function actualizarGestion(){
     fetch("http://144.126.210.74:8080/api/gestion/"+ g_id_gestion, requestOptions)
       .then((response) => {
         if(response.status == 200){
+          setTimeout(() => {
           location.href ="listar.html";
+          }, 2000);
           let alertDiv = document.createElement("div");
           alertDiv.className = "alert alert-danger";
           alertDiv.role = "alert";
