@@ -205,14 +205,6 @@ function actualizarUsuario(){
   var celular = parseInt(document.getElementById("txt_celular").value);
   var username = document.getElementById("txt_username").value;
   var password = document.getElementById("txt_password").value;
-  if (id === "") {
-    mostrarAlertaDeDatos("Por favor, ingrese el id de usuario.", "alert-danger");
-    return; 
-  }
-  if (dv === "") {
-    mostrarAlertaDeDatos("Por favor, ingrese el dv de usuario.", "alert-danger");
-    return; 
-  }
   if (nombres === "") {
     mostrarAlertaDeDatos("Por favor, ingrese el nombre de usuario.", "alert-danger");
     return; 
