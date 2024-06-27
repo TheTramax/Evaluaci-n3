@@ -33,7 +33,9 @@ const requestOptions = {
 fetch("http://144.126.210.74:8080/api/tipo_gestion/", requestOptions)
   .then((response) => {
     if(response.status == 200){
+    setTimeout(() => {
     location.href ="listar.html";
+    }, 2000);
     let alertDiv = document.createElement("div");
     alertDiv.className = "alert alert-success";
     alertDiv.role = "alert";
@@ -170,7 +172,9 @@ function actualizarTipoGestion(){
   fetch("http://144.126.210.74:8080/api/tipo_gestion/"+ g_id_tipo_gestion, requestOptions)
   .then((response) => {
     if(response.status == 200){
+      setTimeout(() => {
       location.href ="listar.html";
+      }, 2000);
       let alertDiv = document.createElement("div");
       alertDiv.className = "alert alert-success";
       alertDiv.role = "alert";
@@ -207,7 +211,9 @@ function actualizarTipoGestion(){
       .then((response) => {
         //Cambiar por elementos de bootstrap
         if(response.status == 200){
+          setTimeout(() => {
           location.href ="listar.html";
+          }, 2000);
           let alertDiv = document.createElement("div");
           alertDiv.className = "alert alert-success";
           alertDiv.role = "alert";
