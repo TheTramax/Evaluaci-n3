@@ -279,7 +279,7 @@ function actualizarGestion(){
           location.href ="listar.html";
           }, 2000);
           let alertDiv = document.createElement("div");
-          alertDiv.className = "alert alert-danger";
+          alertDiv.className = "alert alert-success";
           alertDiv.role = "alert";
           alertDiv.innerHTML = `
           Registro eliminado correctamente`;
