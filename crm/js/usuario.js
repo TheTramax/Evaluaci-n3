@@ -31,16 +31,16 @@ if (email === "") {
   mostrarAlertaDeDatos("Por favor, ingrese el email de usuario.", "alert-danger");
   return; 
 }
-if (celular === "") {
+if (celular === ""|| isNaN(parseInt(celular))) {
   mostrarAlertaDeDatos("Por favor, ingrese el celular de usuario.", "alert-danger");
   return; 
 }
 if (username === "") {
-  mostrarAlertaDeDatos("Por favor, ingrese el celular de usuario.", "alert-danger");
+  mostrarAlertaDeDatos("Por favor, ingrese el username de usuario.", "alert-danger");
   return; 
 }
 if (password === "") {
-  mostrarAlertaDeDatos("Por favor, ingrese el celular de usuario.", "alert-danger");
+  mostrarAlertaDeDatos("Por favor, ingrese el password de usuario.", "alert-danger");
   return; 
 }
 //Encabezado de la solicitud
@@ -202,7 +202,7 @@ function actualizarUsuario(){
   var nombres = document.getElementById("txt_nombres").value;
   var apellidos = document.getElementById("txt_apellidos").value;
   var email = document.getElementById("txt_email").value;
-  var celular = document.getElementById("txt_celular").value;
+  var celular = parseInt(document.getElementById("txt_celular").value);
   var username = document.getElementById("txt_username").value;
   var password = document.getElementById("txt_password").value;
   if (id === "") {
@@ -225,16 +225,16 @@ function actualizarUsuario(){
     mostrarAlertaDeDatos("Por favor, ingrese el email de usuario.", "alert-danger");
     return; 
   }
-  if (celular === "") {
+  if (celular === ""|| isNaN(parseInt(celular))) {
     mostrarAlertaDeDatos("Por favor, ingrese el celular de usuario.", "alert-danger");
     return; 
   }
   if (username === "") {
-    mostrarAlertaDeDatos("Por favor, ingrese el celular de usuario.", "alert-danger");
+    mostrarAlertaDeDatos("Por favor, ingrese el username de usuario.", "alert-danger");
     return; 
   }
   if (password === "") {
-    mostrarAlertaDeDatos("Por favor, ingrese el celular de usuario.", "alert-danger");
+    mostrarAlertaDeDatos("Por favor, ingrese el password de usuario.", "alert-danger");
     return; 
   }
   //Encabezado de la solicitud
